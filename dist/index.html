@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>BentoB AR menu</title>
+	<link rel="icon" type="image/x-icon" href="./assets/My capstone-d006054e.png">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="module" crossorigin src="./assets/index-4594df6d.js"></script>
+  <link rel="stylesheet" href="./assets/index-5ce4fe1b.css">
+</head>
+
+<body>
+    
+    <div id = "content" >
+
+
+   <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a class="ar-object" id="1" href="#" onclick ="showText1()"> Oshinko Sushi Roll</a>
+    <a class="ar-object" id="2" href="#" onclick ="showText2()"> Japanese Katsu Curry</a>
+    <a class="ar-object" id="3" href="#" onclick ="showText3()">Gyozas</a>
+    <a class="ar-object" id="4" href="#" onclick ="showText4()">Creamy Miso Ramen</a>
+  </div>
+
+  <div id="container" style="position: fixed;"></div>
+  <span style="font-size:30px;cursor:pointer; position: absolute; color: #C9242D; z-index: 10001;margin-left:5%;margin-top: 38px;" onclick ="openNav()"> &#9776; Menu </span> 
+  
+  <img src="./assets/bento b logo-10-1108eccd.png" width="120" height="120" style="padding-left: 220px;">
+
+<button type="button" id="place-button">PLACE</button>
+
+</div>  
+
+<div class="dishcard" id="oshinko">
+	Oshinko Sushi Roll
+	<p>Japanese pickles rolled into a maki preparation</p>
+</div>
+
+<div class="dishcard" id="bento">
+	Japanese Katsu Curry
+	<p>Garlic rice, veg gyoza, avocado salad, and pickled radish. Jain variant available</p>
+</div>
+
+<div class="dishcard" id="gyoza">
+	Veg Gyoza
+	<p>Dumplings with minced vegetables or Mushrooms, steamed or pan fried,
+per your choice. Jain variant for Veg Gyoza available</p>
+
+</div>
+
+<div class="dishcard" id="miso">
+	Creamy Miso Ramen
+	<p>Ramen in a coconut miso broth with a 
+		variety of vegetables. 
+		Jain variant available</p>
+
+</div>
+
+
+<script>
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+
+  function showText1(){
+	document.getElementById("oshinko").style.opacity="1";
+	document.getElementById("bento").style.opacity="0";
+    document.getElementById("gyoza").style.opacity="0";
+	document.getElementById("miso").style.opacity="0";
+}
+
+function showText2(){
+	document.getElementById("oshinko").style.opacity="0";
+	document.getElementById("bento").style.opacity="1";
+    document.getElementById("gyoza").style.opacity="0";
+	document.getElementById("miso").style.opacity="0";
+}
+
+function showText3(){
+	document.getElementById("oshinko").style.opacity="0";
+	document.getElementById("bento").style.opacity="0";
+    document.getElementById("gyoza").style.opacity="1";
+	document.getElementById("miso").style.opacity="0";
+}
+
+function showText4(){
+	document.getElementById("oshinko").style.opacity="0";
+	document.getElementById("bento").style.opacity="0";
+    document.getElementById("gyoza").style.opacity="0";
+	document.getElementById("miso").style.opacity="1";
+}
+
+
+
+  </script>
+
+  
+	</body>
+</html>
+
